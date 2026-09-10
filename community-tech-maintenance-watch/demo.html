@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CTMW demo</title>
+<style>
+  body { margin: 0; background: #f6f6f6; color: #202122; }
+  .wikitable { background: #fff; }
+  .wikitable th { background: #eaecf0; text-align: left; }
+  code { background: #eaecf0; padding: 0 3px; border-radius: 3px; }
+</style>
+</head>
+<body>
+<!--
+  Standalone visual demo. No Tampermonkey and no network needed.
+  It loads the real userscript file and calls its runDemo() helper, which builds
+  a mock two-table page with canned revision history and applies the exact same
+  badging logic the script uses on the live wiki page.
+
+  Open this file directly in a browser (double-click / File > Open).
+-->
+<script src="community-tech-maintenance-watch.user.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    window.CTMaintenanceWatch.runDemo();
+  });
+</script>
+</body>
+</html>
